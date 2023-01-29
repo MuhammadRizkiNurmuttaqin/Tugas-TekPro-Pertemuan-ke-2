@@ -1,8 +1,8 @@
 package dingngoding;
 /*	Deskripsi
- * Nama : Muhammad Rizki Nurmuttaqin
- * Kelas : D4-1B
- * NIM : 221524051
+ * Nama     : Muhammad Rizki Nurmuttaqin
+ * Kelas    : D4-1B
+ * NIM      : 221524051
  */
 
  import java.util.Scanner;
@@ -17,10 +17,7 @@ public class Soal4 {
         item = sc.nextInt();
         sc.close();
 
-        hasil = (item < 15) ? gaji - ((((15 - item) * hargaitem) * 15) / 100)
-                : (item >= 40) ? gaji + (((hargaitem * 25) / 100) * item)
-                        : (item > 80) ? gaji + (((hargaitem * 35) / 100) * item)
-                                : gaji + (((hargaitem * 10) / 100) * item);
+        hasil = (item >= 40) ? gaji + (((hargaitem * 25)/100)*item) : (item > 80) ? gaji + (((hargaitem * 35)/100)*item) : (item < 15) ? gaji - (((15 - item)* hargaitem) * 15 / 100) : gaji + (((hargaitem * 10)/100) * item);
 
         System.out.println(hasil);
     }
